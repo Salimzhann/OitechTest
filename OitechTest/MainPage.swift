@@ -7,13 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainPage: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        setupUI()
     }
 
+    func setupUI() {
+        
+    }
 
 }
 
