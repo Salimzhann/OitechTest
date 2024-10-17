@@ -38,7 +38,7 @@ class MovieCell: UITableViewCell {
         NSLayoutConstraint.activate([
             movieTitle.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
             movieTitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            movieYear.topAnchor.constraint(equalTo: movieTitle.bottomAnchor, constant: 5),
+            movieYear.topAnchor.constraint(equalTo: movieTitle.bottomAnchor, constant: 3),
             movieYear.leadingAnchor.constraint(equalTo: movieTitle.leadingAnchor)
         ])
     }

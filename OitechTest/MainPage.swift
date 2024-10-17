@@ -21,11 +21,13 @@ class MainPage: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Trend Movies"
         setupUI()
         setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         viewModel.fetchTrendingMovies { [weak self] in
             DispatchQueue.main.async {
                 self?.moviesTableView.reloadData()
@@ -54,6 +56,17 @@ class MainPage: UIViewController {
         moviesTableView.delegate = self
         moviesTableView.dataSource = self
     }
+    
+    func showMovieDetail(for movie: MovieResult) {
+        let alert = UIAlertController(
+            title: movie.title,
+            message: "Year: \(movie.year)\nIMDb ID: \(movie.imdbID)",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
+
 
 }
 
@@ -69,5 +82,16 @@ extension MainPage: UITableViewDelegate, UITableViewDataSource {
         cell.setup(title: viewModel.movies[indexPath.item].title, year: viewModel.movies[indexPath.item].year)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true) // Deselect the row after selection
+            
+            let selectedMovie = viewModel.movies[indexPath.row]
+            print("Selected Movie: \(selectedMovie.title)")
+
+            // Navigate to a detailed view or show an alert
+            showMovieDetail(for: selectedMovie)
+        }
+    
 }
 
