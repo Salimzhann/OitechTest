@@ -22,6 +22,7 @@ class MainPage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -38,6 +38,7 @@ class MainPageViewModel {
             do {
                 let decodedData = try JSONDecoder().decode(TrendMovieData.self, from: data)
                 self.movies = decodedData.movieResults
+                print(self.movies)
                 completion()
             } catch {
                 print("JSON parsing error:", error)
