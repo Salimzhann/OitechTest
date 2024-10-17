@@ -8,6 +8,8 @@
 import UIKit
 
 class MainPage: UIViewController {
+    
+    private let viewModel = MainPageViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()

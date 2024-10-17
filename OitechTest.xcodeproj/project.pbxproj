@@ -12,6 +12,7 @@
 		19213F6A2CC10FF7006D8BE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19213F692CC10FF7006D8BE1 /* Assets.xcassets */; };
 		19213F6D2CC10FF7006D8BE1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 19213F6C2CC10FF7006D8BE1 /* Base */; };
 		19213F752CC114C9006D8BE1 /* MainPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19213F742CC114C9006D8BE1 /* MainPageViewModel.swift */; };
+		19213F772CC115DB006D8BE1 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19213F762CC115DB006D8BE1 /* MovieData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		19213F6C2CC10FF7006D8BE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19213F6E2CC10FF7006D8BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19213F742CC114C9006D8BE1 /* MainPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewModel.swift; sourceTree = "<group>"; };
+		19213F762CC115DB006D8BE1 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				19213F602CC10FF6006D8BE1 /* AppDelegate.swift */,
 				19213F642CC10FF6006D8BE1 /* MainPage.swift */,
 				19213F742CC114C9006D8BE1 /* MainPageViewModel.swift */,
+				19213F762CC115DB006D8BE1 /* MovieData.swift */,
 				19213F692CC10FF7006D8BE1 /* Assets.xcassets */,
 				19213F6B2CC10FF7006D8BE1 /* LaunchScreen.storyboard */,
 				19213F6E2CC10FF7006D8BE1 /* Info.plist */,
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19213F772CC115DB006D8BE1 /* MovieData.swift in Sources */,
 				19213F752CC114C9006D8BE1 /* MainPageViewModel.swift in Sources */,
 				19213F652CC10FF6006D8BE1 /* MainPage.swift in Sources */,
 				19213F612CC10FF6006D8BE1 /* AppDelegate.swift in Sources */,
