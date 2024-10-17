@@ -4,8 +4,9 @@ class MainPageViewModel {
     
     private let apiKey = "b3955bba0fmsh04de82cd874cba3p1462fejsn70d5a4ecad54"
     private let urlString = "https://movies-tv-shows-database.p.rapidapi.com/?page=1"
+    var movies: [MovieResult] = []
 
-    func fetchTrendingMovies() {
+    func fetchTrendingMovies(completion: @escaping () -> Void) {
         
         guard let url = URL(string: urlString) else {
             print("Invalid URL")
@@ -35,9 +36,9 @@ class MainPageViewModel {
             }
 
             do {
-                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                    print("Trending Movies:", json)
-                }
+                let decodedData = try JSONDecoder().decode(TrendMovieData.self, from: data)
+                self.movies = decodedData.movieResults
+                completion()
             } catch {
                 print("JSON parsing error:", error)
             }
