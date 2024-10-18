@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainView: UIViewController {
+final class MainView: UIViewController {
     
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -63,7 +63,7 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MovieCell.identifier, for: indexPath) as! MovieCell
-        cell.setup(title: viewModel.movies[indexPath.item].title, year: viewModel.movies[indexPath.item].year)
+        cell.config(title: viewModel.movies[indexPath.item].title, year: viewModel.movies[indexPath.item].year)
         return cell
     }
     

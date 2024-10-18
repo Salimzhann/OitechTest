@@ -11,10 +11,10 @@ class MovieDetailView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        config()
     }
     
-    private func setup() {
+    private func config() {
         
     }
 }

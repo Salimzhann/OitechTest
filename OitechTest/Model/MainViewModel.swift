@@ -1,6 +1,6 @@
 import UIKit
 
-class MainViewModel {
+final class MainViewModel {
     
     private let apiKey = "b3955bba0fmsh04de82cd874cba3p1462fejsn70d5a4ecad54"
     private let urlString = "https://movies-tv-shows-database.p.rapidapi.com/?page=1"
@@ -36,16 +36,13 @@ class MainViewModel {
             }
 
             do {
-                let decodedData = try JSONDecoder().decode(TrendMovieData.self, from: data)
-                self.movies = decodedData.movieResults
-                print(self.movies)
+                let result = try JSONDecoder().decode(TrendMovieData.self, from: data)
+                self.movies = result.movieResults
                 completion()
             } catch {
                 print("JSON parsing error:", error)
             }
         }
-
         task.resume()
     }
-
 }
