@@ -9,7 +9,7 @@ import UIKit
 
 class MainView: UIViewController {
     
-    let tableView: UITableView = {
+    private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(MovieCell.self, forCellReuseIdentifier: MovieCell.identifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -19,21 +19,15 @@ class MainView: UIViewController {
     private let viewModel = MainViewModel()
     private var movies: [MovieResult] = []
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
         setupTableView()
-        
-        viewModel.fetchTrendingMovies { [weak self] in
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-            }
-        }
-        
+        fetchingData()
     }
     
-    func configUI() {
+    private func configUI() {
         title = "Trend Movies"
         view.backgroundColor = .systemBackground
         
@@ -46,9 +40,17 @@ class MainView: UIViewController {
         ])
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func fetchingData() {
+        viewModel.fetchTrendingMovies { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
     }
 }
 
@@ -66,8 +68,8 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            
-        }
+        
+    }
     
 }
 
