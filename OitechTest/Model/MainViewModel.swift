@@ -1,6 +1,6 @@
 import UIKit
 
-class MainPageViewModel {
+class MainViewModel {
     
     private let apiKey = "b3955bba0fmsh04de82cd874cba3p1462fejsn70d5a4ecad54"
     private let urlString = "https://movies-tv-shows-database.p.rapidapi.com/?page=1"

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainPage: UIViewController {
+class MainView: UIViewController {
     
     let moviesTableView: UITableView = {
         let tv = UITableView()
@@ -15,7 +15,7 @@ class MainPage: UIViewController {
         return tv
     }()
     
-    private let viewModel = MainPageViewModel()
+    private let viewModel = MainViewModel()
     private var movies: [MovieResult] = []
     
 
@@ -71,7 +71,7 @@ class MainPage: UIViewController {
 }
 
 
-extension MainPage: UITableViewDelegate, UITableViewDataSource {
+extension MainView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.movies.count
