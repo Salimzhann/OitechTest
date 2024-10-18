@@ -16,4 +16,6 @@ final class MovieDetailViewModel {
         return key
     }()
     
+    private let url: String = "https://movies-tv-shows-database.p.rapidapi.com/"
+    
 }
