@@ -15,6 +15,7 @@
 		19213F772CC115DB006D8BE1 /* TrendMovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19213F762CC115DB006D8BE1 /* TrendMovieData.swift */; };
 		19213F7B2CC127E1006D8BE1 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19213F7A2CC127E1006D8BE1 /* MovieCell.swift */; };
 		19213F7D2CC13C18006D8BE1 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19213F7C2CC13C18006D8BE1 /* MovieDetailView.swift */; };
+		19213F9D2CC20A29006D8BE1 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19213F9C2CC20A29006D8BE1 /* MovieDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		19213F762CC115DB006D8BE1 /* TrendMovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendMovieData.swift; sourceTree = "<group>"; };
 		19213F7A2CC127E1006D8BE1 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		19213F7C2CC13C18006D8BE1 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		19213F9C2CC20A29006D8BE1 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				19213F742CC114C9006D8BE1 /* MainViewModel.swift */,
+				19213F9C2CC20A29006D8BE1 /* MovieDetail.swift */,
 				19213F762CC115DB006D8BE1 /* TrendMovieData.swift */,
 			);
 			path = Model;
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19213F772CC115DB006D8BE1 /* TrendMovieData.swift in Sources */,
+				19213F9D2CC20A29006D8BE1 /* MovieDetail.swift in Sources */,
 				19213F752CC114C9006D8BE1 /* MainViewModel.swift in Sources */,
 				19213F7D2CC13C18006D8BE1 /* MovieDetailView.swift in Sources */,
 				19213F652CC10FF6006D8BE1 /* MainView.swift in Sources */,

@@ -2,7 +2,13 @@ import UIKit
 
 final class MainViewModel {
     
-    private let apiKey = "b3955bba0fmsh04de82cd874cba3p1462fejsn70d5a4ecad54"
+    private let apiKey: String = {
+        guard let key = Bundle.main.object(forInfoDictionaryKey: "API_KEY") as? String else {
+            fatalError("API Key not found in Info.plist")
+        }
+        return key
+    }() 
+    
     private let urlString = "https://movies-tv-shows-database.p.rapidapi.com/?page=1"
     var movies: [MovieResult] = []
 
