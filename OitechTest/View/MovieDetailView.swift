@@ -12,7 +12,7 @@ final class MovieDetailView: UIViewController {
     private let viewModel = MovieDetailViewModel()
     private var movieID: String?
     
-    private let titleLabel: UILabel = createLabel(fontWeight: .light)
+    private let titleLabel: UILabel = createLabel(fontWeight: .bold)
     private let yearLabel: UILabel = createLabel(fontWeight: .light)
     private let ratingLabel: UILabel = createLabel(fontWeight: .light)
     private let voteLable: UILabel = createLabel(fontWeight: .light)
@@ -22,7 +22,7 @@ final class MovieDetailView: UIViewController {
     
     private let starsLabel: UILabel = {
         let label = UILabel()
-        label.text = "Stars:"
+        label.text = "Actors:"
         label.font = UIFont.systemFont(ofSize: 15, weight: .light)
         return label
     }()
