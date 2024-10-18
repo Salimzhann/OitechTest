@@ -12,47 +12,13 @@ final class MovieDetailView: UIViewController {
     private let viewModel = MovieDetailViewModel()
     private var movieID: String?
     
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
-        return label
-    }()
-    
-    private let yearLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 15, weight: .light)
-        return label
-    }()
-    
-    private let ratingLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 15, weight: .light)
-        return label
-    }()
-    
-    private let voteLable: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 15, weight: .light)
-        return label
-    }()
-    
-    private let genresLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 15, weight: .light)
-        return label
-    }()
-    
-    private let countriesLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 15, weight: .light)
-        return label
-    }()
-    
-    private let languageLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 15, weight: .light)
-        return label
-    }()
+    private let titleLabel: UILabel = createLabel(fontWeight: .light)
+    private let yearLabel: UILabel = createLabel(fontWeight: .light)
+    private let ratingLabel: UILabel = createLabel(fontWeight: .light)
+    private let voteLable: UILabel = createLabel(fontWeight: .light)
+    private let genresLabel: UILabel = createLabel(fontWeight: .light)
+    private let countriesLabel: UILabel = createLabel(fontWeight: .light)
+    private let languageLabel: UILabel = createLabel(fontWeight: .light)
     
     private let starsLabel: UILabel = {
         let label = UILabel()
@@ -180,5 +146,13 @@ extension MovieDetailView: UICollectionViewDelegate, UICollectionViewDataSource,
         let height: CGFloat = 30
         
         return CGSize(width: width, height: height)
+    }
+}
+
+extension MovieDetailView {
+    private static func createLabel(fontWeight: UIFont.Weight) -> UILabel {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15, weight: fontWeight)
+        return label
     }
 }
