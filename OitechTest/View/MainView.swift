@@ -17,7 +17,6 @@ final class MainView: UIViewController {
     }()
     
     private let viewModel = MainViewModel()
-    private var movies: [MovieResult] = []
     
     
     override func viewDidLoad() {
@@ -68,7 +67,10 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let selectedMovie = viewModel.movies[indexPath.row]
+        let movieDetailVC = MovieDetailView()
+        movieDetailVC.config(id: selectedMovie.imdbID) 
+        navigationController?.pushViewController(movieDetailVC, animated: true)
     }
     
 }
