@@ -8,7 +8,6 @@
 import UIKit
 
 final class MovieDetailView: UIViewController {
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
